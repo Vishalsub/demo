@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<robot name="oscar" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find oscar_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find oscar_description)/urdf/oscar.trans" />
+<xacro:include filename="$(find oscar_description)/urdf/oscar.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0019778566400626535 -0.04361891802559598 0.11535924434069494" rpy="0 0 0"/>
+    <mass value="3.5985309735333133"/>
+    <inertia ixx="0.012207" iyy="0.015756" izz="0.024778" ixy="0.000576" iyz="-7.1e-05" ixz="-0.000114"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Link_2">
+  <inertial>
+    <origin xyz="0.06416771283112625 -0.02007279494127408 0.08455593881219675" rpy="0 0 0"/>
+    <mass value="0.21535367469923436"/>
+    <inertia ixx="8.9e-05" iyy="4.7e-05" izz="4.7e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.130563 0.016752 -0.026124" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/wheel_Link_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.130563 0.016752 -0.026124" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/wheel_Link_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_Link_1">
+  <inertial>
+    <origin xyz="-0.001650240134483047 4.2524029316613754e-05 -5.335880294277118e-06" rpy="0 0 0"/>
+    <mass value="0.21535367469923436"/>
+    <inertia ixx="8.9e-05" iyy="4.7e-05" izz="4.7e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.068149 0.036829 -0.111811" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/wheel_Link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.068149 0.036829 -0.111811" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/wheel_Link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_pair_1">
+  <inertial>
+    <origin xyz="0.012226827691112607 -0.007990888814527395 0.0001761830523612784" rpy="0 0 0"/>
+    <mass value="0.029027751433312272"/>
+    <inertia ixx="2e-06" iyy="6e-06" izz="7e-06" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.086901 0.025681 -0.128824" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link_pair_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.086901 0.025681 -0.128824" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link_pair_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="big_triangle_1">
+  <inertial>
+    <origin xyz="0.01959928810285337 -0.02154704692541016 -0.0025833920793428" rpy="0 0 0"/>
+    <mass value="0.5852008654597004"/>
+    <inertia ixx="0.000922" iyy="0.0005" izz="0.001124" ixy="9e-06" iyz="3.4e-05" ixz="-3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1234 0.03068 -0.129186" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/big_triangle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1234 0.03068 -0.129186" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/big_triangle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1">
+  <inertial>
+    <origin xyz="0.005479987897294147 -0.0076005169104072096 0.00011435253621608354" rpy="0 0 0"/>
+    <mass value="0.0032878096446212726"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.175817 0.066421 -0.117954" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.175817 0.066421 -0.117954" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="big_non-actuated_triangle_mirror_1">
+  <inertial>
+    <origin xyz="0.013865250567738768 -0.03190214556019534 0.008926750637037614" rpy="0 0 0"/>
+    <mass value="0.5662185689427796"/>
+    <inertia ixx="0.000481" iyy="0.000914" izz="0.001107" ixy="6e-06" iyz="-3.7e-05" ixz="2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.188898 0.079501 -0.118182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/big_non-actuated_triangle_mirror_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.188898 0.079501 -0.118182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/big_non-actuated_triangle_mirror_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link__1__1">
+  <inertial>
+    <origin xyz="-0.001500000000000723 -0.018248813930114405 -0.00015877422356638804" rpy="0 0 0"/>
+    <mass value="0.005831209644621273"/>
+    <inertia ixx="1e-06" iyy="0.0" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212 0.131818 -0.130182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212 0.131818 -0.130182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/link__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rectangle_mirror_1">
+  <inertial>
+    <origin xyz="-0.012906729831406949 -0.04529666208562133 -0.01086883116906677" rpy="0 0 0"/>
+    <mass value="1.2875886385584925"/>
+    <inertia ixx="0.002195" iyy="0.005065" izz="0.005858" ixy="0.000235" iyz="0.000123" ixz="-0.000113"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212 0.168316 -0.129864" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/rectangle_mirror_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212 0.168316 -0.129864" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://oscar_description/meshes/rectangle_mirror_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Right wheel_joint 1" type="continuous">
+  <origin xyz="-0.130563 -0.016752 0.026124" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_Link_2"/>
+  <axis xyz="-0.999962 -3.8e-05 -0.008725"/>
+</joint>
+
+<joint name="Left_wheel_joint" type="continuous">
+  <origin xyz="0.068149 -0.036829 0.111811" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_Link_1"/>
+  <axis xyz="0.999962 3.8e-05 0.008725"/>
+</joint>
+
+<joint name="link_pair_1_to_base_link" type="revolute">
+  <origin xyz="0.086901 -0.025681 0.128824" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_pair_1"/>
+  <axis xyz="-3.8e-05 -0.999962 0.008725"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="big_triangle_to_link_pair_1" type="revolute">
+  <origin xyz="0.036499 -0.004999 0.000362" rpy="0 0 0"/>
+  <parent link="link_pair_1"/>
+  <child link="big_triangle_1"/>
+  <axis xyz="-3.8e-05 -0.999962 0.008725"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="link_1_to_" type="revolute">
+  <origin xyz="0.052417 -0.035741 -0.011232" rpy="0 0 0"/>
+  <parent link="big_triangle_1"/>
+  <child link="link_1"/>
+  <axis xyz="0.707107 0.707107 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 7" type="revolute">
+  <origin xyz="0.013081 -0.01308 0.000228" rpy="0 0 0"/>
+  <parent link="link_1"/>
+  <child link="big_non-actuated_triangle_mirror_1"/>
+  <axis xyz="-0.707107 -0.707107 0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 8" type="revolute">
+  <origin xyz="0.023102 -0.052317 0.012" rpy="0 0 0"/>
+  <parent link="big_non-actuated_triangle_mirror_1"/>
+  <child link="link__1__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="0.017453" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 9" type="revolute">
+  <origin xyz="0.0 -0.036498 -0.000318" rpy="0 0 0"/>
+  <parent link="link__1__1"/>
+  <child link="rectangle_mirror_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="0.017453" effort="100" velocity="100"/>
+</joint>
+
+</robot>

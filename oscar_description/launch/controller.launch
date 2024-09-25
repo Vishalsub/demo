@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find oscar_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="oscar" args="Right wheel_joint 1_position_controller Left_wheel_joint_position_controller link_pair_1_to_base_link_position_controller big_triangle_to_link_pair_1_position_controller link_1_to__position_controller Revolute 7_position_controller Revolute 8_position_controller Revolute 9_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/oscar/joint_states"/>
+</node>
+
+</launch>
